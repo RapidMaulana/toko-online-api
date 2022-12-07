@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class handle
 {
@@ -19,7 +18,7 @@ class handle
     public function handle(Request $request, Closure $next)
     {
         if (auth()->user()->role != "admin"){
-            return response([
+            return response()->json([
                 'status' => 403,
                 'message' => 'Endpoint ini cuma bisa di akses admin 👀'
             ], 403);
@@ -27,3 +26,4 @@ class handle
         return $next($request);
     }
 }
+

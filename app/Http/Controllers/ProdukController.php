@@ -46,7 +46,7 @@ class ProdukController extends Controller
             "nama_produk" => $request->nama_produk,
             "deskripsi_produk" => $request->deskripsi_produk,
             "kategori" => $request->kategori,
-            "jumlah" => $request->jumlah,
+            "stok" => $request->stok,
             "harga" => $request->harga,
         ]);
 
@@ -103,7 +103,7 @@ class ProdukController extends Controller
             $tables->nama_produk = $request->nama_produk ? $request->nama_produk : $request->nama_produk;
             $tables->deskripsi_produk = $request->deskripsi_produk ? $request->deskripsi_produk : $request->deskripsi_produk;
             $tables->kategori = $request->kategori ? $request->kategori : $request->kategori;
-            $tables->jumlah = $request->jumlah ? $request->jumlah : $request->jumlah;
+            $tables->stok = $request->stok ? $request->stok : $request->stok;
             $tables->harga =  $request->harga ? $request->harga : $request->harga;
             $tables->save();
             

@@ -66,7 +66,7 @@ class AdminController extends Controller
         $request->user()->currentAccessToken()->delete();
 
         return [
-            'message' => 'Logged Out'
+            'message' => 'Anda telah keluar'
         ];
     }
 }

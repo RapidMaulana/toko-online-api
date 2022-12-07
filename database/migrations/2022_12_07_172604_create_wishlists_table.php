@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('wishlists', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nama_pembeli');
-            $table->string('nama_produk');
-            $table->integer('jumlah');
+            $table->string('nama_barang');
             $table->integer('harga');
-            $table->integer('total');
-            $table->integer('bayar');
         });
     }
 
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('wishlists');
     }
 };
